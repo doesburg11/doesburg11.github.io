@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Why Do Humans Cooperate? | Human Behavior Patterns</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://doesburg11.github.io/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Why Do Humans Cooperate? | Human Behavior Patterns"><meta data-rh="true" name="description" content="A minimal, abstract synthesis — with implications for ecology, game theory, and multi‑agent reinforcement learning (MARL)"><meta data-rh="true" property="og:description" content="A minimal, abstract synthesis — with implications for ecology, game theory, and multi‑agent reinforcement learning (MARL)"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://doesburg11.github.io/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications"><link data-rh="true" rel="alternate" href="https://doesburg11.github.io/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications" hreflang="en"><link data-rh="true" rel="alternate" href="https://doesburg11.github.io/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Why Do Humans Cooperate?","item":"https://doesburg11.github.io/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications"}]}</script><link rel="stylesheet" href="/assets/css/styles.0c6aa8c7.css">
+<script src="/assets/js/runtime~main.dc13498d.js" defer="defer"></script>
+<script src="/assets/js/main.f43925b2.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Behavior Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Behavior Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Human Behavior Patterns</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">Overview</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/">The Human Behavior Patterns Project</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/human-behavior-patterns/overview-hbp">Human Behavior Patterns</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pred-prey-grass/overview-ppg">Predator-Prey-Grass Project</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/social-behavior/altruism/overview-altruism">Social Behavior</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/social-behavior/altruism/overview-altruism">Altruism</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/social-behavior/overview-cooperation">Cooperation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications">Why Do Humans Cooperate?</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/to_do">To do</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Social Behavior</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Why Do Humans Cooperate?</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Why Do Humans Cooperate?</h1></header>
+<p><em>A minimal, abstract synthesis — with implications for ecology, game theory, and multi‑agent reinforcement learning (MARL)</em></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-the-core-question">1. The core question<a href="#1-the-core-question" class="hash-link" aria-label="Direct link to 1. The core question" title="Direct link to 1. The core question">​</a></h2>
+<p>The surface answers to <em>&quot;Why do people cooperate?&quot;</em> are many:</p>
+<ul>
+<li>survival</li>
+<li>reciprocity</li>
+<li>empathy</li>
+<li>norms</li>
+<li>reputation</li>
+<li>laws</li>
+<li>morality</li>
+</ul>
+<p>But these are <strong>mechanisms</strong>, not root causes.</p>
+<p>This document compresses them into <strong>fewer, more abstract drivers</strong> that explain <em>why those mechanisms exist at all</em> — and why cooperation is sometimes fragile, sometimes stable, and sometimes inevitable.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-first-reduction-three-overarching-reasons">2. First reduction: three overarching reasons<a href="#2-first-reduction-three-overarching-reasons" class="hash-link" aria-label="Direct link to 2. First reduction: three overarching reasons" title="Direct link to 2. First reduction: three overarching reasons">​</a></h2>
+<p>Nearly all forms of cooperation can be reduced to <strong>three meta‑drivers</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-interdependence-of-outcomes">2.1 Interdependence of outcomes<a href="#21-interdependence-of-outcomes" class="hash-link" aria-label="Direct link to 2.1 Interdependence of outcomes" title="Direct link to 2.1 Interdependence of outcomes">​</a></h3>
+<blockquote>
+<p><em>My success depends on others.</em></p>
+</blockquote>
+<p>Cooperation becomes rational when payoffs are <strong>coupled</strong>:</p>
+<ul>
+<li>group hunting</li>
+<li>shared resources</li>
+<li>division of labor</li>
+<li>public goods</li>
+<li>ecological feedback loops</li>
+</ul>
+<p>No agent can fully optimize alone.</p>
+<p>This is the foundation of:</p>
+<ul>
+<li>game theory payoff matrices</li>
+<li>evolutionary fitness landscapes</li>
+<li>ecological constraints</li>
+<li>MARL environments with shared reward channels</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-temporal-extension-the-future-matters">2.2 Temporal extension (the future matters)<a href="#22-temporal-extension-the-future-matters" class="hash-link" aria-label="Direct link to 2.2 Temporal extension (the future matters)" title="Direct link to 2.2 Temporal extension (the future matters)">​</a></h3>
+<blockquote>
+<p><em>Short‑term sacrifice can yield long‑term gain.</em></p>
+</blockquote>
+<p>Cooperation emerges when interactions are <strong>repeated</strong>:</p>
+<ul>
+<li>reciprocity</li>
+<li>reputation</li>
+<li>trust</li>
+<li>learning</li>
+<li>cultural transmission</li>
+</ul>
+<p>Defection often wins locally but loses globally.</p>
+<p>This driver underlies:</p>
+<ul>
+<li>iterated games</li>
+<li>evolutionary stability</li>
+<li>reinforcement learning across episodes</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-internalization-of-group-structure">2.3 Internalization of group structure<a href="#23-internalization-of-group-structure" class="hash-link" aria-label="Direct link to 2.3 Internalization of group structure" title="Direct link to 2.3 Internalization of group structure">​</a></h3>
+<blockquote>
+<p><em>The group exists inside the individual.</em></p>
+</blockquote>
+<p>External coordination pressures become <strong>internal control systems</strong>:</p>
+<ul>
+<li>empathy</li>
+<li>guilt and shame</li>
+<li>norms</li>
+<li>moral emotions</li>
+<li>identity</li>
+</ul>
+<p>This explains why humans cooperate even when:</p>
+<ul>
+<li>no one is watching</li>
+<li>punishment is unlikely</li>
+<li>rewards are delayed or absent</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="24-onesentence-synthesis">2.4 One‑sentence synthesis<a href="#24-onesentence-synthesis" class="hash-link" aria-label="Direct link to 2.4 One‑sentence synthesis" title="Direct link to 2.4 One‑sentence synthesis">​</a></h3>
+<blockquote>
+<p><strong>Cooperation emerges when outcomes are coupled, time matters, and group constraints become internal.</strong></p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-further-compression-two-reasons">3. Further compression: two reasons<a href="#3-further-compression-two-reasons" class="hash-link" aria-label="Direct link to 3. Further compression: two reasons" title="Direct link to 3. Further compression: two reasons">​</a></h2>
+<p>If we abstract further, the three drivers collapse into <strong>two</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-constraint-coupling">3.1 Constraint coupling<a href="#31-constraint-coupling" class="hash-link" aria-label="Direct link to 3.1 Constraint coupling" title="Direct link to 3.1 Constraint coupling">​</a></h3>
+<p>Agents cannot optimize independently because of:</p>
+<ul>
+<li>shared resources</li>
+<li>shared risks</li>
+<li>shared payoff gradients</li>
+<li>ecological and informational coupling</li>
+</ul>
+<p>This applies equally to:</p>
+<ul>
+<li>biology</li>
+<li>economics</li>
+<li>ecosystems</li>
+<li>MARL environments</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-compression">3.2 Compression<a href="#32-compression" class="hash-link" aria-label="Direct link to 3.2 Compression" title="Direct link to 3.2 Compression">​</a></h3>
+<blockquote>
+<p><em>The system finds cheaper ways to regulate itself.</em></p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>norms replace constant negotiation</li>
+<li>emotions replace explicit calculation</li>
+<li>identity replaces monitoring</li>
+</ul>
+<p>Cooperation is <strong>computationally efficient</strong>.</p>
+<p>This perspective is especially powerful for:</p>
+<ul>
+<li>open‑ended systems</li>
+<li>evolutionary MARL</li>
+<li>norm emergence</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-maximal-abstraction-one-reason">4. Maximal abstraction: one reason<a href="#4-maximal-abstraction-one-reason" class="hash-link" aria-label="Direct link to 4. Maximal abstraction: one reason" title="Direct link to 4. Maximal abstraction: one reason">​</a></h2>
+<p>At the deepest level:</p>
+<blockquote>
+<p><strong>Cooperation is a solution to coordination under uncertainty.</strong></p>
+</blockquote>
+<p>Uncertainty about:</p>
+<ul>
+<li>the future</li>
+<li>others’ intentions</li>
+<li>environmental dynamics</li>
+</ul>
+<p>Cooperation reduces uncertainty by <strong>aligning expectations</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-mapping-this-to-ecological-marl-predpreygrassstyle-environments">5. Mapping this to ecological MARL (PredPreyGrass‑style environments)<a href="#5-mapping-this-to-ecological-marl-predpreygrassstyle-environments" class="hash-link" aria-label="Direct link to 5. Mapping this to ecological MARL (PredPreyGrass‑style environments)" title="Direct link to 5. Mapping this to ecological MARL (PredPreyGrass‑style environments)">​</a></h2>
+<p>Your current environment already instantiates some drivers — but not all.</p>
+<table><thead><tr><th>Mechanism</th><th>Present?</th><th>Abstract driver</th></tr></thead><tbody><tr><td>Energy thresholds (solo cannot kill large prey)</td><td>✅</td><td>Interdependence</td></tr><tr><td>Repeated encounters</td><td>✅</td><td>Temporal extension</td></tr><tr><td>Spatial clustering</td><td>✅</td><td>Constraint coupling</td></tr><tr><td>Norms / punishment</td><td>❌</td><td>Internalization</td></tr><tr><td>Reputation / memory</td><td>❌</td><td>Temporal compression</td></tr><tr><td>Identity / roles</td><td>❌</td><td>Compression</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="interpretation">Interpretation<a href="#interpretation" class="hash-link" aria-label="Direct link to Interpretation" title="Direct link to Interpretation">​</a></h3>
+<ul>
+<li>Cooperation exists</li>
+<li>but it is <strong>situational and fragile</strong></li>
+<li>not norm‑stabilized</li>
+</ul>
+<p>This is exactly what one would expect given the drivers currently implemented.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-why-this-reduction-matters">6. Why this reduction matters<a href="#6-why-this-reduction-matters" class="hash-link" aria-label="Direct link to 6. Why this reduction matters" title="Direct link to 6. Why this reduction matters">​</a></h2>
+<p>This abstraction is not philosophical ornamentation. It is <strong>design guidance</strong>.</p>
+<p>It allows you to:</p>
+<ul>
+<li>avoid hand‑crafted reward shaping</li>
+<li>introduce minimal structural pressures</li>
+<li>distinguish ecological necessity from moral overlay</li>
+<li>design for open‑endedness rather than fixed equilibria</li>
+</ul>
+<p>The real research question becomes:</p>
+<blockquote>
+<p><strong>What minimal structural conditions make cooperation inevitable rather than engineered?</strong></p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-final-wrapup">7. Final wrap‑up<a href="#7-final-wrapup" class="hash-link" aria-label="Direct link to 7. Final wrap‑up" title="Direct link to 7. Final wrap‑up">​</a></h2>
+<ul>
+<li>Cooperation is not one thing — it is an emergent solution</li>
+<li>Its surface forms differ, but its deep causes are few</li>
+<li>Ecology, evolution, game theory, and MARL all converge on the same abstractions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="final-compressed-statement">Final compressed statement<a href="#final-compressed-statement" class="hash-link" aria-label="Direct link to Final compressed statement" title="Direct link to Final compressed statement">​</a></h3>
+<blockquote>
+<p><strong>Cooperation emerges when independent optimization breaks down, the future matters, and the system internalizes coordination to reduce uncertainty and computational cost.</strong></p>
+</blockquote>
+<hr>
+<p><em>This document intentionally bridges biology, game theory, ecology, and MARL, and is suitable as conceptual framing for research notes, project documentation, or theory sections.</em></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/doesburg11/doesburg11.github.io/edit/main/docs/social-behavior/why_humans_cooperate_abstract_reduction_and_marl_implications.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/social-behavior/overview-cooperation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Cooperation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/to_do"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">To do</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-the-core-question" class="table-of-contents__link toc-highlight">1. The core question</a></li><li><a href="#2-first-reduction-three-overarching-reasons" class="table-of-contents__link toc-highlight">2. First reduction: three overarching reasons</a><ul><li><a href="#21-interdependence-of-outcomes" class="table-of-contents__link toc-highlight">2.1 Interdependence of outcomes</a></li><li><a href="#22-temporal-extension-the-future-matters" class="table-of-contents__link toc-highlight">2.2 Temporal extension (the future matters)</a></li><li><a href="#23-internalization-of-group-structure" class="table-of-contents__link toc-highlight">2.3 Internalization of group structure</a></li><li><a href="#24-onesentence-synthesis" class="table-of-contents__link toc-highlight">2.4 One‑sentence synthesis</a></li></ul></li><li><a href="#3-further-compression-two-reasons" class="table-of-contents__link toc-highlight">3. Further compression: two reasons</a><ul><li><a href="#31-constraint-coupling" class="table-of-contents__link toc-highlight">3.1 Constraint coupling</a></li><li><a href="#32-compression" class="table-of-contents__link toc-highlight">3.2 Compression</a></li></ul></li><li><a href="#4-maximal-abstraction-one-reason" class="table-of-contents__link toc-highlight">4. Maximal abstraction: one reason</a></li><li><a href="#5-mapping-this-to-ecological-marl-predpreygrassstyle-environments" class="table-of-contents__link toc-highlight">5. Mapping this to ecological MARL (PredPreyGrass‑style environments)</a><ul><li><a href="#interpretation" class="table-of-contents__link toc-highlight">Interpretation</a></li></ul></li><li><a href="#6-why-this-reduction-matters" class="table-of-contents__link toc-highlight">6. Why this reduction matters</a></li><li><a href="#7-final-wrapup" class="table-of-contents__link toc-highlight">7. Final wrap‑up</a><ul><li><a href="#final-compressed-statement" class="table-of-contents__link toc-highlight">Final compressed statement</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">About</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/doesburg11/PredPreyGrass" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.linkedin.com/in/peter-van-doesburg/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://docs.ray.io/en/master/rllib/index.html#rllib-industry-grade-scalable-reinforcement-learning" target="_blank" rel="noopener noreferrer" class="footer__link-item">RLlib: Industry-Grade, Scalable Reinforcement Learning<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.marl-book.com/download/marl-book.pdf" target="_blank" rel="noopener noreferrer" class="footer__link-item">Multi-Agent Reinforcement Learning: Foundations and Modern Approaches.<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Peter van Doesburg.</div></div></div></footer></div>
+</body>
+</html>
