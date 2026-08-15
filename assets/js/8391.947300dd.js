@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhuman_cooperation_site=self.webpackChunkhuman_cooperation_site||[]).push([[8391],{8391:(e,a,s)=>{s.d(a,{createInfoServices:()=>c.v});var c=s(6491);s(1400)}}]);
